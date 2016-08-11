@@ -8,7 +8,7 @@
         
         //echo "entered username/password: " .$username ." " .$password ."<br>";
 
-        $conn = new mysqli('localhost', 'robert', 'qowpie893', 'rcms');
+        $conn = new mysqli('localhost', 'robert', '(removed)', 'rcms');
         if($conn->connect_error){
         	die("Connection failed: " .$conn->connect_error);
         }

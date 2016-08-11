@@ -6,7 +6,7 @@
 
                 $servername = "localhost";
                 $username = "robert";
-                $password = "qowpie893";
+                $password = "(removed)";
                 $database = "rcms";
 
                 $connection = new mysqli($servername, $username, $password, $database);
