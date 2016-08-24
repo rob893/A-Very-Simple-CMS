@@ -5,10 +5,7 @@
   }    
     if(!empty($_POST)){
         
-        $conn = new mysqli('localhost', 'robert', '(removed)', 'rcms');
-        if($conn->connect_error){
-        	die("Connection failed: " .$conn->connect_error);
-        }
+        require("../includes/db.php");
     
         $posttitle = $_POST['post_title'];
         $postcontent = $_POST['post_content'];

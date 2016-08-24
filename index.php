@@ -22,7 +22,7 @@
     <body>
         <a href="index.php">Home</a>
         <a href="about.php">About Us</a>
-        <a href="newsPhotos.php">News Photos</a>
+        <a href="products.php">Shop</a>
         <h1>Welcome to a Totally Fake News Site!</h1>
         <?php foreach($posts_array as $post): ?>
             <div>

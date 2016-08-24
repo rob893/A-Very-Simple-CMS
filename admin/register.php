@@ -1,10 +1,7 @@
 <?php
     if(isset($_POST['register'])){
         
-        $conn = new mysqli('localhost', 'robert', '(removed)', 'rcms');
-        if($conn->connect_error){
-        	die("Connection failed: " .$conn->connect_error);
-        }
+        require("../includes/db.php");
 
         $username = strip_tags($_POST['username']);
         $password = strip_tags($_POST['password']);

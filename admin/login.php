@@ -2,11 +2,8 @@
     session_start();
     
     if(isset($_POST['login'])){
-        
-        $conn = new mysqli('localhost', 'robert', '(removed)', 'rcms');
-        if($conn->connect_error){
-        	die("Connection failed: " .$conn->connect_error);
-        }
+
+        require("../includes/db.php");
 
         $username = strip_tags($_POST['username']);
         $password = strip_tags($_POST['password']);
@@ -35,7 +32,7 @@
         //echo "session username: " .$_SESSION['username']. "<br>"; 
         
         if($username == $_SESSION['username'] && password_verify($password, $_SESSION['password'])== true){
-        	header("Location: postEdit.php");
+        	header("Location: welcome.php");
         } else {
         	echo "Invalid username/password.";
         }
