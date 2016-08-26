@@ -3,8 +3,8 @@
 
     require("includes/db.php");
         
-    if(isset($_POST['submit'])){
-        foreach($_POST['quantity'] as $key => $val) {
+    if(isset($_POST['submit'])){ //checks to see if submit button has been pushed.
+        foreach($_POST['quantity'] as $key => $val) { //this loop updates the SSSION cart values with the new input values
             if($val==0) {
                 unset($_SESSION['cart'][$key]);
             } else {
@@ -26,7 +26,6 @@
         <h1>Current Cart</h1>
         <a href="products.php">Continue Shopping</a>
         <?php
-        echo $_SESSION['id'];
         if(isset($_SESSION['cart'])){
         ?>
         <form method="post" action="cart.php">
